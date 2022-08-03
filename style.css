@@ -1,0 +1,93 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    background-color: lawngreen;
+    background-image: url("./nordic.jpeg");
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+
+}
+
+* {
+    font-family: Rubik,  serif ;
+    color: rgb(236, 239, 244);
+
+}
+::selection {
+background-color: #88c0d0;
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("Rubik-VariableFont_wght.ttf") format("woff2");
+}
+#main {
+background-color: #2e3440;
+width: 60vw;
+height: 100vh;
+display: grid;
+padding: 4rem 6rem;
+gap: 2rem;
+grid-template: auto 1fr/ 1fr;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+}
+
+
+#title {
+font-size: 3rem;
+font-weight: 600;
+}
+
+#formcontainer {
+background-color: #3b4252;
+max-height: max-content;
+border-radius: 0.4rem;
+box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.265), 2px 2px 5px rgba(0, 0, 0, 0.53);
+padding: 4rem 2rem;
+}
+
+form {
+display: grid;
+gap: 2rem;
+}
+
+label {
+font-weight: 600;
+
+}
+span {
+color:#bf616a ;
+font-weight: 400;
+margin: 2rem;
+}
+input {
+all: unset;
+margin-top: 0.5rem;
+background-color: #4c566a;
+padding: 0.2rem 0.5rem;
+width: auto;
+border: 1px solid #2e3440;
+color: #81a1c1;
+}
+
+input:focus:invalid {
+
+border: 1px solid #bf616a;
+}
+
+
+
+
+
+
+
+
+
