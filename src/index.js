@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 const email = document.querySelector("#email");
 const email_error = document.querySelector("#email-error");
-
+let emailTimeout;
 let emailError = (e) => {
   if (email.validity.valueMissing) {
     email_error.textContent = "* You need to enter an E-mail Address"
@@ -20,7 +20,8 @@ email.addEventListener("input", (e) => {
     //email.classList.add("correct");
 
   } else {
-    setTimeout(emailError, 2000);
+    clearTimeout(emailTimeout);
+    emailTimeout = setTimeout(emailError, 2000);
 
     //email.classList.remove("correct");
   }
@@ -28,7 +29,7 @@ email.addEventListener("input", (e) => {
 
 const country = document.querySelector("#country");
 const country_error = document.querySelector("#country-error");
-
+let countryTimeout;
 let countryError = () => {
 
   if (country.validity.valueMissing) {
@@ -45,13 +46,14 @@ country.addEventListener("input", (e) => {
     country_error.textContent = "";
     country.classList.remove("error");
   } else {
-    setTimeout(countryError, 1000);
+    clearTimeout(countryTimeout);
+    countryTimeout = setTimeout(countryError, 2000);
   }
 })
 
 const zipcode = document.querySelector("#zipcode");
 const zipcode_error = document.querySelector("#zipcode-error");
-
+let zipTimeout;
 let zipCodeError = () => {
 
   if (zipcode.validity.valueMissing) {
@@ -69,16 +71,78 @@ zipcode.addEventListener("input", () => {
     zipcode_error.textContent = "";
     zipcode.classList.remove("error");
   } else {
-    setTimeout(zipCodeError, 1000);
+    clearTimeout(zipTimeout)
+    zipTimeout = setTimeout(zipCodeError, 2000);
   }
 })
 
 
+const password = document.querySelector("#password");
+const password_error = document.querySelector("#password-error");
+let passTimeout;
+let passWordError = () => {
+
+  if (password.validity.valueMissing) {
+    password_error.textContent = "You need to enter a password";
+  } else if (password.validity.tooShort) {
+    password_error.textContent = "Password is too short. 6-20 Characters";
+  } else if (password.validity.tooLong) {
+    password_error.textContent = "Password is too long. 6-20 Characters"
+  }
+password.classList.add("error");
+
+}
+
+password.addEventListener("input", (e) => {
+
+  if (password.validity.valid) {
+    password_error.textContent = "";
+    password.classList.remove("error");
+    password.classList.add("correct");
+
+  } else {
+    clearTimeout(passTimeout);
+    passTimeout = setTimeout(passWordError, 1000);
+  }
+})
+
+const password_confirm = document.querySelector("#password-confirm");
+const password_confirm_error = document.querySelector("#password-confirm-error");
+let passConfirmTimeout;
+
+let passWordConfirmError = (e) => {
+
+  if (password_confirm.validity.valueMissing) {
+    password_confirm_error.textContent = "You need to match the password above";
+  } else if (password_confirm.validity.tooShort) {
+    password_confirm_error.textContent = "You need to match the password above";
+  }
+  password_confirm.classList.add("error");
+  password_confirm.classList.remove("correct");
+  password_confirm.classList.remove("validerror");
+}
+
+password_confirm.addEventListener("input", (e) => {
+
+  if (password_confirm.validity.valid) {
+    if (password_confirm.value === password.value) {
+      password_confirm_error.textContent = "";
+      password_confirm.classList.remove("error");
+      password_confirm.classList.remove("validerror");
+      password_confirm.classList.add("correct");
+
+    } else {
+      password_confirm_error.textContent = "Passwords do not match";
+      password_confirm.classList.add("validerror")
+    }
+  } else {
+
+    passWordConfirmError()
+  }
 
 
 
-
-
+})
 
 
 
