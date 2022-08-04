@@ -108,7 +108,7 @@ password.addEventListener("input", (e) => {
 
 const password_confirm = document.querySelector("#password-confirm");
 const password_confirm_error = document.querySelector("#password-confirm-error");
-let passConfirmTimeout;
+
 
 let passWordConfirmError = (e) => {
 
@@ -144,9 +144,40 @@ password_confirm.addEventListener("input", (e) => {
 
 })
 
+//because we put novalidate on html form, the form submits with empty fields despite being empty, so we need to code a submit listener on the button
+//that will stop propogation if wrong
 
+form.addEventListener("submit", (event) => {
 
+  if (!email.validity.valid || !country.validity.valid || !zipcode.validity.valid || !password.validity.valid || !password_confirm.validity.valid) {
+    if (email.validity.valueMissing) {
+      email_error.textContent = "* You need to enter an E-mail Address";
+      email.classList.add("error");
+    }
+     if (country.validity.valueMissing) {
+      country_error.textContent = "You need to enter a Country";
+      country.classList.add("error");
+    }
+    if (zipcode.validity.valueMissing) {
+      zipcode_error.textContent = "You need to enter a Zip Code";
+      zipcode.classList.add("error");
+    }
+     if (password.validity.valueMissing) {
+      password_error.textContent = "You need to enter a password";
+      password.classList.add("error");
+    }
+    if (password_confirm.validity.valueMissing) {
+      password_confirm_error.textContent = "You need to match the password above";
+      password_confirm.classList.add("error");
+    }
 
+    console.log("submit with invalid")
+    event.preventDefault(); //prevents form submitting if any inputs are invalid
+  }
+
+window.open("https://github.com/MooseCapital")
+
+})
 
 
 
