@@ -14,30 +14,31 @@
             <form novalidate>
                 <label for="email">Email
                     <br>
-                    <input type="email" id="email" name="email" required  maxlength="100">
+                    <input type="email" id="email" name="email" required class="" maxlength="100">
                     <br>
-                    <span id="email-error">* email </span>
+                    <span id="email-error"></span>
                 </label>
                 <label for="country">Country
                     <br>
-                    <input type="text" id="country" name="country" required maxlength="40">
+                    <input type="text" id="country" name="country" required class="" minlength="4" maxlength="40">
                     <span id="country-error"></span>
                 </label>
                 <label for="zipcode">Zip Code
                     <br>
-                    <input type="text" id="zipcode" name="zipcode" required  pattern="[0-9]{5}"  maxlength="5">
-                    <span id="zipcode-error"></span>
+                    <input type="text" id="zipcode" name="zipcode" required class="" pattern="[0-9]{5}"  maxlength="5">
+                    <span id="zipcode-error"> </span>
                 </label>
                 <label for="password">Password
                     <br>
-                    <input type="password" id="password" name="password" required minlength="6" maxlength="20">
+                    <input type="password" id="password" name="password" required class="" minlength="6" maxlength="20">
                     <span id="password-error" ></span>
                 </label>
                 <label for="password-confirm">Password Confirm
                     <br>
-                    <input type="text" id="password-confirm" name="password-confirm" required minlength="6" maxlength="20">
+                    <input type="text" id="password-confirm" name="password-confirm" class="" required minlength="6" maxlength="20">
                     <span id="password-confirm-error"></span>
                 </label>
+                <button id="submit">Submit</button>
 
             </form>
 
