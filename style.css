@@ -84,15 +84,18 @@ color: #81a1c1;
 height: max-content;
 
 }
-
 .error:invalid {
-
-border: 1px solid #bf616a;
+    border: 1px solid #bf616a;
+}
+.validerror {
+    border: 1px solid #bf616a;
 }
 /*.correct:valid {*/
 /*border: 1px solid #a3be8c;*/
 /*}*/
-
+.correct:valid {
+border: 1px solid #a3be8c;
+}
 #submit {
 border: 1px solid #2e3440;
 background-color: #434c5e;
@@ -110,14 +113,7 @@ background-color: #434c5e;
 cursor: pointer;
 }
 
-label:nth-child(4) {
 
-
-}
-
-#password {
-
-}
 
 
 
