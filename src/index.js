@@ -162,5 +162,6 @@ form.addEventListener("submit", (event) => {
     event.preventDefault(); // prevents form submitting if any inputs are invalid
   } else {
     window.open("https://moosecapital.github.io/browser-form-practice/");
+    //sends to form
   }
 });
