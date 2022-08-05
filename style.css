@@ -13,25 +13,28 @@ body {
 }
 
 * {
-    font-family: Rubik,  serif ;
+    font-family: Rubik, serif;
     color: rgb(236, 239, 244);
 
 }
+
 ::selection {
-background-color: #88c0d0;
+    background-color: #88c0d0;
 }
+
 @font-face {
     font-family: "Rubik";
     src: url("Rubik-VariableFont_wght.ttf") format("woff2");
 }
+
 #main {
-background-color: #2e3440;
-width: 60vw;
-height: 100vh;
-display: grid;
-padding: 4rem 6rem;
-gap: 2rem;
-grid-template: auto 1fr/ 1fr;
+    background-color: #2e3440;
+    width: 60vw;
+    height: 100vh;
+    display: grid;
+    padding: 4rem 6rem;
+    gap: 2rem;
+    grid-template: auto 1fr/ 1fr;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -41,64 +44,70 @@ grid-template: auto 1fr/ 1fr;
 
 
 #title {
-font-size: 3rem;
-font-weight: 600;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 #formcontainer {
 
-background-color: #3b4252;
-max-height: max-content;
-border-radius: 0.4rem;
-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.265), 2px 2px 5px rgba(0, 0, 0, 0.53);
-padding: 4rem 2rem;
+    background-color: #3b4252;
+    max-height: max-content;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.265), 2px 2px 5px rgba(0, 0, 0, 0.53);
+    padding: 4rem 2rem;
 }
 
 form {
-display: grid;
-gap: 0.5rem;
-grid-template: auto auto auto auto / 1fr 1fr;
-grid-auto-flow: column;
+    display: grid;
+    gap: 0.5rem;
+    grid-template: auto auto auto auto / 1fr 1fr;
+    grid-auto-flow: column;
 }
 
 label {
-font-weight: 600;
-width: 240px;
+    font-weight: 600;
+    width: 240px;
 
 }
+
 span {
-color:#bf616a ;
-font-weight: 400;
-margin: 0.5rem;
+    color: #bf616a;
+    font-weight: 400;
+    margin: 0.5rem;
 
-display: inline-block;
+    display: inline-block;
 }
+
 input {
-all: unset;
-margin-top: 0.5rem;
-background-color: #4c566a;
-padding: 0.2rem 0.5rem;
-width: 220px;
-border: 1px solid #2e3440;
-color: #81a1c1;
-height: max-content;
+    all: unset;
+    margin-top: 0.5rem;
+    background-color: #4c566a;
+    padding: 0.2rem 0.5rem;
+    width: 220px;
+    border: 1px solid #2e3440;
+    color: #81a1c1;
+    height: max-content;
 
 }
+
 .error:invalid {
     border: 1px solid #bf616a;
 }
+
 .validerror {
     border: 1px solid #bf616a;
 }
+
 /*.correct:valid {*/
 /*border: 1px solid #a3be8c;*/
 /*}*/
 .correct:valid {
-border: 1px solid #a3be8c;
+    border: 1px solid #a3be8c;
 }
+
 #submit {
-border: 1px solid #2e3440;
-background-color: #434c5e;
+    border: 1px solid #2e3440;
+    background-color: #434c5e;
     padding: 0.5rem 2rem;
     width: max-content;
     color: #88c0d0;
@@ -109,8 +118,9 @@ background-color: #434c5e;
     justify-self: end;
 
 }
+
 #submit:hover {
-cursor: pointer;
+    cursor: pointer;
 }
 
 
